@@ -1,0 +1,6 @@
+from tkinter.tix import WINDOW
+
+
+WINDOW_WIDTH = 1980
+WINDOW_HEIGHT = 1080
+FRAMERATE = 120

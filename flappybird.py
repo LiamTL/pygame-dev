@@ -6,16 +6,10 @@ class Game:
         
         # setup
         pygame.init()
-        self.display_surface = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
+        self.display_surface = pygame.display.set_mode((480,800))
         pygame.display.set_caption('Flappy Bird')
         self.clock = pygame.time.Clock()
-
-        # sprite groups
-        self.all_sprites = pygame.sprite.Group()
-        self.collision_sprites = pygame.sprite.Group()
-
-        
-
+ 
     def run(self):
         last_time = time.time()
         while True:
@@ -33,7 +27,7 @@ class Game:
             # game logic
             
             pygame.display.update()
-            self.clock.tick(FRAMERATE)
+            self.clock.tick(120)
  
 if __name__ == '__main__':
     game = Game()
