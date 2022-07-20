@@ -6,37 +6,37 @@ class AnimationPlayer:
 	def __init__(self):
 		self.frames = {
 			# magic
-			'flame': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/flame/frames'),
-			'aura': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/aura'),
-			'heal': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/heal/frames'),
+			'flame': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/flame/frames'),
+			'aura': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/aura'),
+			'heal': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/heal/frames'),
 			
 			# attacks 
-			'claw': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/claw'),
-			'slash': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/slash'),
-			'sparkle': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/sparkle'),
-			'leaf_attack': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf_attack'),
-			'thunder': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/thunder'),
+			'claw': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/claw'),
+			'slash': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/slash'),
+			'sparkle': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/sparkle'),
+			'leaf_attack': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf_attack'),
+			'thunder': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/thunder'),
 
 			# monster deaths
-			'squid': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/smoke_orange'),
-			'raccoon': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/raccoon'),
-			'spirit': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/nova'),
-			'bamboo': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/bamboo'),
+			'squid': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/smoke_orange'),
+			'raccoon': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/raccoon'),
+			'spirit': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/nova'),
+			'bamboo': import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/bamboo'),
 			
 			# leafs 
 			'leaf': (
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf1'),
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf2'),
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf3'),
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf4'),
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf5'),
-				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf6'),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf1')),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf2')),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf3')),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf4')),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf5')),
-				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/graphics/particles/leaf6'))
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf1'),
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf2'),
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf3'),
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf4'),
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf5'),
+				import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf6'),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf1')),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf2')),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf3')),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf4')),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf5')),
+				self.reflect_images(import_folder('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/graphics/particles/leaf6'))
 				)
 			}
 	

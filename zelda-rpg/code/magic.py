@@ -6,8 +6,8 @@ class MagicPlayer:
 	def __init__(self,animation_player):
 		self.animation_player = animation_player
 		self.sounds = {
-		'heal': pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/audio/heal.wav'),
-		'flame':pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/audio/Fire.wav')
+		'heal': pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/audio/heal.wav'),
+		'flame':pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/audio/Fire.wav')
 		}
 
 	def heal(self,player,strength,cost,groups):

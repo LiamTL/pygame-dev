@@ -14,7 +14,7 @@ class Game:
 		self.level = Level()
 
 		# sound 
-		main_sound = pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/modify/audio/main.ogg')
+		main_sound = pygame.mixer.Sound('C:/Users/tayel/Documents/Coding/pygame-dev/zelda-rpg/audio/main.ogg')
 		main_sound.set_volume(0.5)
 		main_sound.play(loops = -1)
 	
