@@ -1,7 +1,6 @@
-import imp
 import pygame, sys, time
 from settings import *
-from sprites import BG 
+from sprites import BG
 
 class Game:
     def __init__(self):
@@ -16,8 +15,13 @@ class Game:
         self.all_sprites = pygame.sprite.Group()
         self.collision_sprites = pygame.sprite.Group()
 
+        # scale factor
+        bg_height = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/flappybird/graphics/environment/background.png").get_height()
+        self.scale_factor = WINDOW_HEIGHT / bg_height
         # sprite setup
-        BG(self.all_sprites)
+        BG(self.all_sprites, self.scale_factor)
+
+       
     def run(self):
         last_time = time.time()
         while True:
@@ -33,6 +37,7 @@ class Game:
                     sys.exit()
             
             # game logic
+            self.all_sprites.update(dt)
             self.all_sprites.draw(self.display_surface)
 
             pygame.display.update()
