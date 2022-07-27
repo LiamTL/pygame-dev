@@ -42,38 +42,38 @@ pygame.init()
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Runner")
 clock = pygame.time.Clock()
-test_font = pygame.font.Font("font/pixeltype.ttf", 50)
+test_font = pygame.font.Font("C:/Users/tayel/Documents/Coding/pygame-dev/runner/font/pixeltype.ttf", 50)
 game_active = False
 start_time = 0
 score = 0
 
-sky_surf = pygame.image.load("graphics/sky.png").convert()
-ground_surf = pygame.image.load("graphics/ground.png").convert()
+sky_surf = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/sky.png").convert()
+ground_surf = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/ground.png").convert()
 
 # score_surf = test_font.render("Score", False, (64, 64, 64))
 # score_rect = score_surf.get_rect(center = (400, 50))
 
 # Snail
-snail_frame1 = pygame.image.load("graphics/snail/snail1.png").convert_alpha()
-snail_frame2 = pygame.image.load("graphics/snail/snail2.png").convert_alpha()
+snail_frame1 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/snail/snail1.png").convert_alpha()
+snail_frame2 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/snail/snail2.png").convert_alpha()
 snail_frames = [snail_frame1, snail_frame2]
 snail_frame_index = 0
 snail_surf = snail_frames[snail_frame_index]
 
 # Fly
-fly_frame1 = pygame.image.load("graphics/fly/fly1.png").convert_alpha()
-fly_frame2 = pygame.image.load("graphics/fly/fly2.png").convert_alpha()
+fly_frame1 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/fly/fly1.png").convert_alpha()
+fly_frame2 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/fly/fly2.png").convert_alpha()
 fly_frames = [fly_frame1, fly_frame2]
 fly_frame_index = 0
 fly_surf = fly_frames[fly_frame_index]
 
 obstacle_rect_list = []
 
-player_walk_1 = pygame.image.load("graphics/player/player_walk_1.png").convert_alpha()
-player_walk_2 = pygame.image.load("graphics/player/player_walk_2.png").convert_alpha()
+player_walk_1 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/player/player_walk_1.png").convert_alpha()
+player_walk_2 = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/player/player_walk_2.png").convert_alpha()
 player_walk = [player_walk_1, player_walk_2]
 player_index = 0
-player_jump = pygame.image.load("graphics/player/jump.png").convert_alpha()
+player_jump = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/player/jump.png").convert_alpha()
 
 
 player_surf = player_walk[player_index]
@@ -81,7 +81,7 @@ player_rect = player_surf.get_rect(bottomright = (80, 300))
 player_gravity = 0
 # Intro Screen
 
-player_stand = pygame.image.load("graphics/player/player_stand.png").convert_alpha()
+player_stand = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/runner/graphics/player/player_stand.png").convert_alpha()
 player_stand = pygame.transform.rotozoom(player_stand, 0, 2)
 player_stand_rect = player_stand.get_rect(center = (400, 200))
 
