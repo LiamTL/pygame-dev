@@ -1,6 +1,6 @@
 import pygame, sys, time
 from settings import *
-from sprites import BG
+from sprites import BG, Ground
 
 class Game:
     def __init__(self):

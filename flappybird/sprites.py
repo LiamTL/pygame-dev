@@ -24,3 +24,6 @@ class BG(pygame.sprite.Sprite):
             self.pos.x = 0
         self.rect.x = round(self.pos.x)
 
+class Ground(pygame.sprite.Sprite):
+    def __init__(self, groups, scale_factor):
+        super().__init__(groups)
