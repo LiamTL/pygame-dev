@@ -3,6 +3,7 @@ from settings import *
 from player import Player
 from overlay import Overlay
 from sprites import Generic
+from pytmx.util_pygame import load_pygame
 
 class Level:
 	def __init__(self):
@@ -17,11 +18,31 @@ class Level:
 		self.overlay = Overlay(self.player)
 
 	def setup(self):
+		tmx_data = load_pygame("C:/Users/tayel/Documents/Coding/pygame-dev/pydew-valley/data/map.tmx")
+
+		# house
+		for layer in ["HouseFloor", "HouseFurnitureBottom"]:
+			for x,y,surf in tmx_data.get_layer_by_name(layer).tiles():
+				Generic((x* TILE_SIZE,y * TILE_SIZE), surf, self.all_sprites, LAYERS["house bottom"])
+
+		for layer in ["HouseWalls", "HouseFurnitureTop"]:
+			for x,y,surf in tmx_data.get_layer_by_name(layer).tiles():
+				Generic((x* TILE_SIZE,y * TILE_SIZE), surf, self.all_sprites)
+
+		# fence
+		for x,y,surf in tmx_data.get_layer_by_name("Fence").tiles():
+			Generic((x* TILE_SIZE,y * TILE_SIZE), surf, self.all_sprites)
+
+		# water
+		# trees
+		# wild flowers
+		
 		Generic(pos = (0, 0), 
 		surf = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/pydew-valley/graphics/world/ground.png").convert_alpha(),
 		groups = self.all_sprites, 
 		z = LAYERS["ground"])
 		self.player = Player((640,360), self.all_sprites)
+
 
 	def run(self,dt):
 		self.display_surface.fill('black')
