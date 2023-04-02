@@ -27,6 +27,7 @@ class Ground(pygame.sprite.Sprite):
 
     def __init__(self, groups, scale_factor):
         super().__init__(groups)
+        self.sprite_type = "ground"
 
         # Image
         ground_surf = pygame.image.load("../pygame-dev/flappybird/graphics/environment/ground.png").convert_alpha()
@@ -45,7 +46,6 @@ class Ground(pygame.sprite.Sprite):
             self.pos.x = 0
 
         self.rect.x = round(self.pos.x)
-
 class Plane(pygame.sprite.Sprite):
     def __init__(self, groups, scale_factor):
         super().__init__(groups)
@@ -96,10 +96,10 @@ class Plane(pygame.sprite.Sprite):
         self.apply_gravity(dt)
         self.animate(dt)
         self.rotate()
-
 class Obstacle(pygame.sprite.Sprite):
     def __init__(self, groups, scale_factor):
         super().__init__(groups)
+        self.sprite_type = "obstacle"
 
         orientation = choice(("up", "down"))
         surf = pygame.image.load(f'C:/Users/tayel/Documents/Coding/pygame-dev/flappybird/graphics/obstacles/{choice((0,1))}.png').convert_alpha()
