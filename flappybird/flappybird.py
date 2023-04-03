@@ -1,5 +1,3 @@
-# P.S Time to return 2 is 1:25:37 Flappy Bird (IG u know dat...)
-
 import pygame, sys, time
 from settings import *
 from sprites import BG, Ground, Plane , Obstacle
@@ -7,6 +5,7 @@ from sprites import BG, Ground, Plane , Obstacle
 
 class Game:
     def __init__(self):
+
         # setup
         pygame.init()
         self.display_surface = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
@@ -38,6 +37,10 @@ class Game:
         # menu
         self.menu_surf = pygame.image.load("C:/Users/tayel/Documents/Coding/pygame-dev/flappybird/graphics/ui/menu.png").convert_alpha()
         self.menu_rect = self.menu_surf.get_rect(center = (WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2))
+
+        # music
+        self.music = pygame.mixer.Sound("C:/Users/tayel/Documents/Coding/pygame-dev/flappybird/sounds/music.wav")
+        self.music.play(loops = -1)
 
 
     def collisions(self):
@@ -80,7 +83,7 @@ class Game:
                     if self.active:
                         self.plane.jump()
                     else:
-                        self.plane = Plane(self.all_sprites, self.scale_factor / 2) # If you take off the divide by to the plane will become THICC xd. Unacceptable!
+                        self.plane = Plane(self.all_sprites, self.scale_factor / 2) # If you take off the divide by two the plane will become THICC xd. Unacceptable!
                         self.active = True
                         self.start_offset = pygame.time.get_ticks()
 

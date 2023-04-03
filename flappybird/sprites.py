@@ -10,7 +10,7 @@ class BG(pygame.sprite.Sprite):
         full_height = bg_image.get_height() * scale_factor
         full_sized_image = pygame.transform.scale(bg_image, (full_width, full_height))
 
-        self.image = pygame.Surface((full_width * 2 ,full_height))
+        self.image = pygame.Surface((full_width * 2, full_height))
         self.image.blit(full_sized_image, (0,0))
         self.image.blit(full_sized_image, (full_width, 0))
 
@@ -66,6 +66,10 @@ class Plane(pygame.sprite.Sprite):
         # mask
         self.mask = pygame.mask.from_surface(self.image)
 
+        # sound
+        self.jump_sound = pygame.mixer.Sound("C:/Users/tayel/Documents/Coding/pygame-dev/flappybird/sounds/jump.wav")
+        self.jump_sound.set_volume(0.3)
+
     def import_frames(self, scale_factor):
         self.frames = []
         for i in range(3):
@@ -79,6 +83,7 @@ class Plane(pygame.sprite.Sprite):
         self.rect.y = round(self.pos.y)
 
     def jump(self):
+        self.jump_sound.play()
         self.direction = -400
 
     def animate(self, dt):
