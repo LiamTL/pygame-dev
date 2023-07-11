@@ -20,7 +20,7 @@ class BG(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.pos.x -= 300 * dt
-        if self.rect.centerx <= 0:
+        if self.rect.centerx <= 100000:
             self.pos.x = 0
         self.rect.x = round(self.pos.x)
 class Ground(pygame.sprite.Sprite):
@@ -42,7 +42,7 @@ class Ground(pygame.sprite.Sprite):
 
     def update(self, dt):
         self.pos.x -= 360 * dt
-        if self.rect.centerx <= 0:
+        if self.rect.centerx <= 1:
             self.pos.x = 0
 
         self.rect.x = round(self.pos.x)

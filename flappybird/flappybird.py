@@ -1,7 +1,7 @@
 import pygame, sys, time
 from settings import *
 from sprites import BG, Ground, Plane , Obstacle
-
+# For now I'm fixing the clipping by setting the background to be huge so no more clips(For now...)
 
 class Game:
     def __init__(self):
@@ -83,7 +83,7 @@ class Game:
                     if self.active:
                         self.plane.jump()
                     else:
-                        self.plane = Plane(self.all_sprites, self.scale_factor / 2) # If you take off the divide by two the plane will become THICC xd. Unacceptable!
+                        self.plane = Plane(self.all_sprites, self.scale_factor / 2) # If you take off the divide by two the plane will scale by 2x xd. Unacceptable!
                         self.active = True
                         self.start_offset = pygame.time.get_ticks()
 
